@@ -20,14 +20,14 @@ Rails 7.0.4.3
 Modificaciones
 
 routes.rb
-    * get 'pages/home'
-    * get 'pages/projects'
-    * get 'pages/contact'
-    * root "pages#home"
+    - get 'pages/home'
+    - get 'pages/projects'
+    - get 'pages/contact'
+    - root "pages#home"
 
 Vistas
-    * projects.html.rb
-    * contact.html.rb
+    - projects.html.rb
+    - contact.html.rb
 
 
 # @page envia nombre de la página a la vista para usarse en barra navegación
@@ -60,7 +60,7 @@ en la vista applicaton.html.erb
 <% else %>
 
     <%= link_to 'Home', '/pages/home', class: "nav-link" %>
-    
+
 <% end %>
 
 Vistas uso de bootstrap 5.3.0
