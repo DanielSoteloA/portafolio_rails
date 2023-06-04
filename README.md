@@ -7,9 +7,11 @@ Desafío - Creación de un proyecto nuevo
 Author
 
 Daniel Sotelo A.
+
 ruby version
 
 ruby 3.1.1p18 (2022-02-18 revision 53f5fc4236) [x86_64-linux]
+
 Rails 7.0.4.3
 
 - rails new portafolio
