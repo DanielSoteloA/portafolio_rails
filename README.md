@@ -1,24 +1,55 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Desarrollo Ruby on Rails para emprendimientos de tipo Startup
 
-Things you may want to cover:
+Desafío - Creación de un proyecto nuevo
 
-* Ruby version
+Author
 
-* System dependencies
+Daniel Sotelo A.
+ruby version
 
-* Configuration
+ruby 3.1.1p18 (2022-02-18 revision 53f5fc4236) [x86_64-linux]
+Rails 7.0.4.3
 
-* Database creation
+rails new portafolio
+cd portafolio
+bundle install
+rails g controller pages home
 
-* Database initialization
+Modificaciones
 
-* How to run the test suite
+routes.rb
+    get 'pages/home'
+    get 'pages/projects'
+    get 'pages/contact'
+    root "pages#home"
 
-* Services (job queues, cache servers, search engines, etc.)
+Vistas
+    projects.html.rb
+    contact.html.rb
 
-* Deployment instructions
+pages_controllers.rb
+@page envia nombre de la página a la vista para usarse en barra navegación
 
-* ...
+  def home
+    @page = "home"
+  end
+
+  def projects
+    @page = "projects"
+  end
+
+  def contact
+    @page = "contact"
+  end
+
+en la vista applicaton.html.erb
+<% if @page == "home" %>
+    <%= link_to 'Home', '/pages/home', class: "nav-link active" %>
+<% else %>
+    <%= link_to 'Home', '/pages/home', class: "nav-link" %>
+<% end %>
+
+Vistas uso de bootstrap 5.3.0
+Despliegue en pagina http://localhost:3000/
